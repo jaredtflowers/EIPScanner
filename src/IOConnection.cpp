@@ -98,11 +98,11 @@ namespace eipScanner {
 
 		auto periodInMicroS = sinceLastHandle.count() * 1000;
 		_connectionTimeoutCount += periodInMicroS;
-		if (_connectionTimeoutCount > _connectionTimeoutMultiplier * _t2oAPI) {
-			Logger(LogLevel::WARNING) << "Connection SeriaNumber=" << _serialNumber << " is closed by timeout";
-			_closeHandle();
-			return false;
-		}
+		//if (_connectionTimeoutCount > _connectionTimeoutMultiplier * _t2oAPI) {
+		//	Logger(LogLevel::WARNING) << "Connection SeriaNumber=" << _serialNumber << " is closed by timeout";
+		//	_closeHandle();
+		//	return false;
+		//}
 
 		_lastHandleTime = now;
 
